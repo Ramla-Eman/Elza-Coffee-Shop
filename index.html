@@ -21,7 +21,7 @@
 
 <body class="w-full h-auto bg-[#221518]">
     <!-- Header -->
-    <header class="w-full h-[170vh] border-2 relative">
+    <header class="w-full md:h-[170vh] h-[85vh] border-2 relative">
         <img src="Img/heroImg.png" alt="Hero Image" class="w-full h-full object-cover hidden sm:flex">
         <img src="Img/hero-mobile.png" alt="Hero Image" class="w-full h-full object-cover sm:hidden flex">
         <div>
@@ -60,6 +60,33 @@
         </ul>
 
         <!-- Hero Section -->
+        <svg viewBox="0 0 500 100" class=" font-DancingScript absolute top-36">
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="20%" style="stop-color:#F8E4BE; stop-opacity:1" />
+                    <stop offset="37%" style="stop-color:#FFF3E0; stop-opacity:1" />
+                    <stop offset="52%" style="stop-color:#FFF8E8; stop-opacity:1" />
+                    <stop offset="73%" style="stop-color:#DFC39D; stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <text x="5%" y="30%" dy=".55em" class="sm:text-[3rem] text-[5rem]" fill="transparent"
+                stroke="url(#gradient)" stroke-width="1">
+                Elza Coffee
+            </text>
+        </svg>
+        <p class="absolute lg:top-[30rem] lg:left-24 sm:top-[20rem] sm:left-8 top-[15rem] left-4 sm:text-[3rem] text-[1.3rem] text-[#DABB9E] font-Leiko">Today's good mood is sponsored by coffee <br class="sm:flex hidden">search for your coffee now</p>
+        <div class="absolute lg:top-[45rem] lg:left-28 sm:top-[32rem] sm:left-8 top-[23rem] left-2 text-[#F8E4BE] md:text-[2.3rem] flex items-center font-Leiko space-x-10">
+            <button class="bg-[#68584c] border-2 rounded-[2rem] border-[#DABB9E] py-1 px-4 hover:bg-[#3b2c2b]">Shop Now</button>
+            <button class="bg-[#68584c] border-2 rounded-[2rem] border-[#DABB9E] py-1 px-4 hover:bg-[#3b2c2b]">Catelog</button>
+        </div>
+
+        <div class="absolute bottom-0 lg:left-12 left-2 flex sm:flex-row flex-col bg-[#4A2721] items-center justify-center py-1 px-3 border-l-2 border-t-2 border-[#DABB9E] rounded-t-[4rem]">
+            <img src="Img/Cup1.png" alt="" class="w-[20rem] ">
+            <div>
+                <h3 class="font-DancingScript text-[#DABB9E] lg:text-[3.5rem] text-[2rem]">But First Coffee</h3>
+                <button class="flex items-center text-[#DABB9E] space-x-3 border-2 border-[#DABB9E] rounded-[2rem] text-[1.5rem] py-1 px-4">Hurry Up <img src="Img/Courier-Bike-Icon.png" class="w-[3rem]"></button>
+            </div>
+        </div>
     </header>
 
 
