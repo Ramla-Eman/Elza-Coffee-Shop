@@ -862,8 +862,8 @@ video {
   display: none;
 }
 
-.h-\[95vh\] {
-  height: 95vh;
+.h-\[130vh\] {
+  height: 130vh;
 }
 
 .h-auto {
@@ -872,18 +872,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.h-\[120vh\] {
-  height: 120vh;
-}
-
-.h-\[140vh\] {
-  height: 140vh;
-}
-
-.h-\[130vh\] {
-  height: 130vh;
 }
 
 .w-\[20rem\] {
@@ -1955,6 +1943,14 @@ video {
   background-color: rgb(255 0 0 / var(--tw-bg-opacity, 1));
 }
 
+.bg-navLinksActive {
+  background-image: linear-gradient(to right, #DFC39D, #F8E4BE, #DFC39D, #F8E4BE, #F8E4BE);
+}
+
+.bg-gradient-border {
+  background-image: linear-gradient(to right, #DFC39D, #F8E4BE, #DFC39D, #F8E4BE, #F8E4BE);
+}
+
 .from-\[\#3F2E29\] {
   --tw-gradient-from: #3F2E29 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(63 46 41 / 0) var(--tw-gradient-to-position);
@@ -2298,6 +2294,10 @@ video {
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity, 1));
+}
+
+.text-transparent {
+  color: transparent;
 }
 
 .text-white {
@@ -2671,6 +2671,13 @@ video {
   forced-color-adjust: none;
 }
 
+.gradient-border {
+  border-width: 4px;
+  border-style: solid;
+  background-clip: border-box;
+  border-color: transparent;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -2707,9 +2714,9 @@ video {
   }
 }
 
-.hover\:bg-\[\#3b2c2b\]:hover {
+.hover\:bg-\[\#3c2c2b\]:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(59 44 43 / var(--tw-bg-opacity, 1));
+  background-color: rgb(60 44 43 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:font-bold:hover {
