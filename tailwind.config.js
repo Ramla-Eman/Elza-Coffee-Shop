@@ -10,20 +10,27 @@ module.exports = {
       fontFamily: {
         'Leiko': ['Lora', 'serif'], // Leiko font family 
         'DancingScript': ['Dancing Script', 'serif'], //Dancing script font family
-      }
+      },
     },
   },
   plugins: [
     function ({ addUtilities }) {
-      addUtilities({
-        '.gradient-border': {
-          'border-width': '4px',
-          'border-style': 'solid',
-          'background-clip': 'border-box',
-          'border-color': 'transparent',
-        },
-      });
-    },
-  ],
+    const newUtilities = {
+      '.text-shadow-sm': {
+        textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)',
+      },
+      '.text-shadow-md': {
+        textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+      },
+      '.text-shadow-lg': {
+        textShadow: '10px 9px 6px rgba(0, 0, 0, 0.5)',
+      },
+      '.text-shadow-none': {
+        textShadow: 'none',
+      },
+    };
+    addUtilities(newUtilities, ['responsive', 'hover']);
+  },
+],
 }
 
