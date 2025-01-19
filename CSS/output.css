@@ -687,6 +687,10 @@ video {
   left: 1rem;
 }
 
+.left-7 {
+  left: 1.75rem;
+}
+
 .right-0 {
   right: 0px;
 }
@@ -902,8 +906,16 @@ video {
   height: 100%;
 }
 
+.w-\[10rem\] {
+  width: 10rem;
+}
+
 .w-\[20rem\] {
   width: 20rem;
+}
+
+.w-\[30\%\] {
+  width: 30%;
 }
 
 .w-\[3rem\] {
@@ -932,10 +944,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[10rem\] {
-  width: 10rem;
 }
 
 .flex-shrink {
@@ -1504,22 +1512,16 @@ video {
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 
-.space-x-6 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(1.5rem * var(--tw-space-x-reverse));
-  margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
+.space-y-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
 
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-}
-
-.space-x-0 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0px * var(--tw-space-x-reverse));
-  margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-y-reverse > :not([hidden]) ~ :not([hidden]) {
@@ -1884,6 +1886,11 @@ video {
   border-top-right-radius: 0.25rem;
 }
 
+.rounded-t-3xl {
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+
 .rounded-t-\[4rem\] {
   border-top-left-radius: 4rem;
   border-top-right-radius: 4rem;
@@ -2020,6 +2027,11 @@ video {
   background-color: rgb(84 54 42 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#54372A\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(84 55 42 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[\#68584c\] {
   --tw-bg-opacity: 1;
   background-color: rgb(104 88 76 / var(--tw-bg-opacity, 1));
@@ -2028,11 +2040,6 @@ video {
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity, 1));
-}
-
-.bg-\[\#54372A\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(84 55 42 / var(--tw-bg-opacity, 1));
 }
 
 .bg-navLinksActive {
@@ -2159,10 +2166,6 @@ video {
      object-fit: scale-down;
 }
 
-.p-4 {
-  padding: 1rem;
-}
-
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -2208,6 +2211,11 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -2216,16 +2224,6 @@ video {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
 }
 
 .text-left {
@@ -2292,6 +2290,10 @@ video {
   font-family: Lora, serif;
 }
 
+.text-\[1\.2rem\] {
+  font-size: 1.2rem;
+}
+
 .text-\[1\.3rem\] {
   font-size: 1.3rem;
 }
@@ -2316,12 +2318,12 @@ video {
   font-size: 3.5rem;
 }
 
-.text-\[6rem\] {
-  font-size: 6rem;
+.text-\[3rem\] {
+  font-size: 3rem;
 }
 
-.text-\[1\.2rem\] {
-  font-size: 1.2rem;
+.text-\[4rem\] {
+  font-size: 4rem;
 }
 
 .text-\[5rem\] {
@@ -2943,6 +2945,14 @@ video {
     right: 3.5rem;
   }
 
+  .md\:ml-5 {
+    margin-left: 1.25rem;
+  }
+
+  .md\:ml-10 {
+    margin-left: 2.5rem;
+  }
+
   .md\:h-\[170vh\] {
     height: 170vh;
   }
@@ -2953,6 +2963,10 @@ video {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:items-start {
+    align-items: flex-start;
   }
 
   .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -2971,6 +2985,10 @@ video {
 
   .md\:text-\[2\.3rem\] {
     font-size: 2.3rem;
+  }
+
+  .md\:text-\[3rem\] {
+    font-size: 3rem;
   }
 }
 
@@ -3005,16 +3023,6 @@ video {
 
   .lg\:hidden {
     display: none;
-  }
-
-  .lg\:justify-evenly {
-    justify-content: space-evenly;
-  }
-
-  .lg\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(0px * var(--tw-space-x-reverse));
-    margin-left: calc(0px * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .lg\:text-\[3\.5rem\] {
