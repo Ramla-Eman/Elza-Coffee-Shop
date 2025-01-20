@@ -104,7 +104,7 @@
         </div>
     </header>
 
-    <div class="relative h-full flex flex-col space-y-10">
+    <div class="relative h-full flex flex-col space-y-24 overflow-hidden">
         <!-- beans image for background -->
         <img src="Img/Coffee beans.png" alt="" class="w-full object-cover absolute top-[28rem]">
         <img src="Img/Coffee beans.png" alt="" class="w-full md:hidden flex object-cover absolute bottom-0">
@@ -366,7 +366,9 @@
         <!-- Our Blogs -->
         <section
             class="w-full h-auto py-4 xl:px-32 px-5 flex flex-col items-center justify-center bg-[#53362A] relative overflow-hidden">
-            <h4 class="font-DancingScript bg-navLinksActive bg-clip-text text-transparent text-[3.5rem] text-shadow-lg absolute top-0">Our Blog</h4>
+            <h4
+                class="font-DancingScript bg-navLinksActive bg-clip-text text-transparent text-[3.5rem] text-shadow-lg absolute top-0">
+                Our Blog</h4>
             <img src="Img/BlogImg/Bg Of blog.png" class="object-cover absolute h-full w-full">
             <div
                 class="w-full flex lg:flex-row flex-col lg:space-x-8 space-x-0 space-y-5 lg:space-y-0 items-center justify-center py-10 mt-16">
@@ -441,8 +443,55 @@
                 <i class="bi bi-chevron-right"></i>
             </div>
         </section>
-    </div>
 
+        <!-- Customer Reveiw -->
+        <section></section>
+
+        <!-- Subscribe Us -->
+        <section
+            class="w-full h-auto py-4 xl:px-32 px-5 flex flex-col items-center justify-center bg-[#54362aa6] relative font-Leiko space-y-16">
+            <img src="Img/subsGlow1.png" alt="" class="absolute left-0 top-0">
+            <img src="Img/subsGlow2.png" alt="" class="absolute left-0 bottom-0 md:flex hidden">
+            <h5 class="text-[#F8E4BE] lg:text-[1.8rem] text-[1.3rem] text-center">Subscribe to our newsletter, discounts
+                and promotions</h5>
+            <input type="email" placeholder="Your Email Address"
+                class="lg:w-[30%] w-full py-1 px-2 text-[1.5rem] rounded-md placeholder:text-[#9D8781] text-[#9D8781]">
+            <button
+                class="bg-[#644639] border-2 rounded-[2rem] border-[#DABB9E] py-1 px-16 hover:bg-[#3c2c2b] text-[1.5rem]"><span
+                    class="bg-navLinksActive bg-clip-text text-transparent">Subscribe</span></button>
+        </section>
+
+        <!-- footer -->
+        <footer class="w-full h-auto bg-[#54362abb] font-Leiko py-16 relative">
+            <img src="Img/Bg footer.png" alt="" class="object-cover w-full h-full absolute top-0">
+            <div class="w-full flex lg:flex-row float-right flex-col items-center lg:space-y-0 space-y-5 justify-evenly text-[#FFF3E0]">
+                <img src="Img/Footer Img.png">
+                <ul class="space-y-6 text-[1.2rem] lg:text-start text-center">
+                    <li><a href="#" class="text-[1.5rem]">About</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+                <ul class="space-y-6 text-[1.2rem] lg:text-start text-center">
+                    <li><a href="#" class="text-[1.5rem]">Customer Resources</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Locations</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+                <ul class="space-y-6 text-[1.2rem] lg:text-start text-center">
+                    <li><a href="#" class="text-[1.5rem]">Services</a></li>
+                    <li><a href="#">Payment Options</a></li>
+                    <li><a href="#">Refunds & Exchange</a></li>
+                    <li><a href="#">Limitation Of Liability</a></li>
+                </ul>
+                <ul class="space-y-6 text-[1.4rem] lg:text-start text-center">
+                    <li><a href="#"><i class="bi bi-geo-alt-fill"></i> Location</a></li>
+                    <li><a href="#"><i class="bi bi-envelope"></i> ramla.eman.ra@gmail.com</a></li>
+                    <li><a href="#"><i class="bi bi-phone"></i> +92 312-0306090</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
 
     <!-- Script Link -->
     <script src="script.js"></script>
