@@ -1,526 +1,893 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eliza Coffee Shop</title>
     <!-- Website Icon -->
-    <link rel="icon" type="image/png" href="Img/Icon.ico">
+    <link rel="icon" type="image/png" href="Img/Icon.ico" />
     <!-- Style Link -->
-    <link rel="stylesheet" href="CSS/output.css">
+    <link rel="stylesheet" href="CSS/output.css" />
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Google Font (Lora and Dancing Script) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
-        rel="stylesheet">
-</head>
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Google Font (Lora and Dancing Script) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body class="w-full h-auto bg-[#221518]">
+  <body class="w-full h-auto bg-[#221518]">
     <!-- Header -->
     <header class="w-full md:h-[170vh] h-[130vh] relative" id="home">
-        <img src="Img/heroImg.png" alt="Hero Image" class="w-full h-full object-cover hidden sm:flex">
-        <img src="Img/hero-mobile.png" alt="Hero Image" class="w-full h-full object-cover sm:hidden flex">
+      <img
+        src="Img/heroImg.png"
+        alt="Hero Image"
+        class="w-full h-full object-cover hidden sm:flex"
+      />
+      <img
+        src="Img/hero-mobile.png"
+        alt="Hero Image"
+        class="w-full h-full object-cover sm:hidden flex"
+      />
+      <div>
+        <img src="Img/Elipse1.png" alt="" class="absolute top-0 left-0 -z-10" />
+        <img src="Img/Elipse2.png" alt="" class="absolute top-0 left-0 -z-10" />
+      </div>
+      <!-- Navbar -->
+      <nav
+        class="absolute top-0 w-full py-2 sm:px-16 px-4 flex items-center justify-between font-Leiko"
+      >
+        <img src="Img/logo.png" alt="Logo" />
+        <div class="flex items-center justify-center space-x-8">
+          <div class="flex items-center space-x-4 text-[#F8E4BE] text-[1.3rem]">
+            <i class="bi bi-person"></i>
+            <i class="bi bi-cart3"></i>
+          </div>
+          <ul
+            class="lg:flex hidden items-center justify-center space-x-12 text-[1.6rem] text-[#FFF8E8]"
+          >
+            <li>
+              <a
+                href="#home"
+                class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#menu"
+                class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl"
+                >Menu</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#product"
+                class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl"
+                >Product</a
+              >
+            </li>
+            <li>
+              <a
+                href="#blog"
+                class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contactUs"
+                class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <!-- Icon For toggle -->
+          <div class="lg:hidden flex items-center text-[2rem] text-[#F8E4BE]">
+            <i class="bi bi-list" id="nav-toggle"></i>
+          </div>
+        </div>
+      </nav>
+      <!-- toggle Navbar -->
+      <ul
+        id="nav-content"
+        class="hidden lg:hidden text-center space-y-3 text-[1.6rem] text-[#FFF8E8] bg-[#221518] sm:bg-gradient-to-r from-[#3F2E29] to-[#7C573C] absolute top-[5.2rem] w-full h-full z-50 font-Leiko"
+      >
+        <li>
+          <a
+            href="#home"
+            class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="#menu"
+            class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl"
+            >Menu</a
+          >
+        </li>
+        <li>
+          <a href="#services"
+            class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a
+            href="#product"
+            class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl"
+            >Product</a
+          >
+        </li>
+        <li>
+          <a
+            href="#blog"
+            class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl"
+            >Blog</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contactUs"
+            class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl"
+            >Contact</a
+          >
+        </li>
+      </ul>
+
+      <!-- Hero Section -->
+      <svg
+        viewBox="0 0 500 100"
+        class="font-DancingScript absolute top-36 textShadow"
+      >
+        <defs>
+          <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="20%" style="stop-color: #f8e4be; stop-opacity: 1" />
+            <stop offset="37%" style="stop-color: #fff3e0; stop-opacity: 1" />
+            <stop offset="52%" style="stop-color: #fff8e8; stop-opacity: 1" />
+            <stop offset="73%" style="stop-color: #dfc39d; stop-opacity: 1" />
+          </linearGradient>
+          <filter id="text-shadow" x="" y="" width="250%" height="300%">
+            <feOffset result="offOut" in="SourceAlpha" dx="4" dy="3" />
+            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="2" />
+            <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+          </filter>
+        </defs>
+        <text
+          x="5%"
+          y="30%"
+          dy=".55em"
+          class="sm:text-[3rem] text-[5rem] textShadow"
+          fill="transparent"
+          filter="url(#text-shadow)"
+          stroke="url(#gradient)"
+          stroke-width="1"
+        >
+          Eliza Coffee
+        </text>
+      </svg>
+      <p
+        class="absolute lg:top-[30rem] lg:left-24 sm:top-[20rem] sm:left-8 top-[15rem] left-4 sm:text-[3rem] text-[1.3rem] text-[#DABB9E] font-Leiko"
+      >
+        Today's good mood is sponsored by <br class="sm:flex hidden" />coffee
+        search for your coffee now
+      </p>
+      <div
+        class="absolute lg:top-[45rem] lg:left-28 sm:top-[32rem] sm:left-8 top-[23rem] left-2 md:text-[2.3rem] text-[1.8rem] flex items-center font-Leiko space-x-10"
+      >
+        <button
+          class="bg-[#68584c] border-2 rounded-[2rem] border-[#DABB9E] py-1 px-4 hover:bg-[#3c2c2b]"
+        >
+          <span class="bg-navLinksActive bg-clip-text text-transparent"
+            >Shop Now</span
+          >
+        </button>
+        <button
+          class="bg-[#68584c] border-2 rounded-[2rem] border-[#DABB9E] py-1 px-4 hover:bg-[#3c2c2b]"
+        >
+          <span class="bg-navLinksActive bg-clip-text text-transparent"
+            >Catelog</span
+          >
+        </button>
+      </div>
+
+      <div
+        class="absolute bottom-0 lg:left-12 left-2 flex sm:flex-row flex-col bg-[#4A2721] items-center justify-center py-1 px-3 border-l-2 border-t-4 border-[#8e5f4c] rounded-t-[4rem]"
+      >
+        <img src="Img/Cup1.png" alt="" class="w-[20rem]" />
         <div>
-            <img src="Img/Elipse1.png" alt="" class="absolute top-0 left-0 -z-10">
-            <img src="Img/Elipse2.png" alt="" class="absolute top-0 left-0 -z-10">
+          <h3
+            class="text-shadow-lg font-DancingScript bg-navLinksActive bg-clip-text text-transparent lg:text-[3.5rem] text-[2rem]"
+          >
+            But First Coffee
+          </h3>
+          <button
+            class="font-Leiko flex items-center bg-navLinksActive bg-clip-text text-transparent space-x-3 border-2 border-[#DABB9E] rounded-[2rem] text-[1.5rem] py-1 px-4"
+          >
+            Hurry Up <img src="Img/Courier-Bike-Icon.png" class="w-[3rem]" />
+          </button>
         </div>
-        <!-- Navbar -->
-        <nav class="absolute top-0 w-full py-2 sm:px-16 px-4 flex items-center justify-between font-Leiko">
-            <img src="Img/logo.png" alt="Logo">
-            <div class="flex items-center justify-center space-x-8 ">
-                <div class="flex items-center space-x-4 text-[#F8E4BE] text-[1.3rem]">
-                    <i class="bi bi-person"></i>
-                    <i class="bi bi-cart3"></i>
-                </div>
-                <ul class="lg:flex hidden items-center justify-center space-x-12 text-[1.6rem] text-[#FFF8E8]">
-                    <li><a href="#home" class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl">Home</a></li>
-                    <li><a href="#menu" class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl">Menu</a></li>
-                    <li><a href="#services" class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl">Services</a></li>
-                    <li><a href="#product" class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl">Product</a></li>
-                    <li><a href="#blog" class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl">Blog</a></li>
-                    <li><a href="#contactUs" class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl">Contact</a></li>
-                </ul>
-                <!-- Icon For toggle -->
-                <div class="lg:hidden flex items-center text-[2rem] text-[#F8E4BE]">
-                    <i class="bi bi-list" id="nav-toggle"></i>
-                </div>
-            </div>
-        </nav>
-        <!-- toggle Navbar -->
-        <ul id="nav-content"
-            class="hidden lg:hidden text-center space-y-3 text-[1.6rem] text-[#FFF8E8] bg-[#221518] sm:bg-gradient-to-r from-[#3F2E29] to-[#7C573C] absolute top-[5.2rem] w-full z-50 font-Leiko">
-            <li><a href="#home" class="hover:underline hover:text-[#FF9900]">Home</a></li>
-            <li><a href="about.html" class="hover:underline hover:text-[#FF9900]">About Us</a></li>
-            <li><a href="shop.html" class="hover:underline hover:text-[#FF9900]">Shop</a></li>
-            <li><a href="contact.html" class="hover:underline hover:text-[#FF9900]">Contact Us</a></li>
-        </ul>
-
-        <!-- Hero Section -->
-        <svg viewBox="0 0 500 100" class="font-DancingScript absolute top-36 textShadow">
-            <defs>
-                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="20%" style="stop-color:#F8E4BE; stop-opacity:1" />
-                    <stop offset="37%" style="stop-color:#FFF3E0; stop-opacity:1" />
-                    <stop offset="52%" style="stop-color:#FFF8E8; stop-opacity:1" />
-                    <stop offset="73%" style="stop-color:#DFC39D; stop-opacity:1" />
-                </linearGradient>
-                <filter id="text-shadow" x="" y="" width="250%" height="300%">
-                    <feOffset result="offOut" in="SourceAlpha" dx="4" dy="3" />
-                    <feGaussianBlur result="blurOut" in="offOut" stdDeviation="2" />
-                    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
-                </filter>
-            </defs>
-            <text x="5%" y="30%" dy=".55em" class="sm:text-[3rem] text-[5rem] textShadow" fill="transparent"
-                filter="url(#text-shadow)" stroke="url(#gradient)" stroke-width="1">
-                Eliza Coffee
-            </text>
-        </svg>
-        <p
-            class="absolute lg:top-[30rem] lg:left-24 sm:top-[20rem] sm:left-8 top-[15rem] left-4 sm:text-[3rem] text-[1.3rem] text-[#DABB9E] font-Leiko">
-            Today's good mood is sponsored by <br class="sm:flex hidden">coffee search for your coffee now</p>
-        <div
-            class="absolute lg:top-[45rem] lg:left-28 sm:top-[32rem] sm:left-8 top-[23rem] left-2 md:text-[2.3rem] text-[1.8rem] flex items-center font-Leiko space-x-10">
-            <button class="bg-[#68584c] border-2 rounded-[2rem] border-[#DABB9E] py-1 px-4 hover:bg-[#3c2c2b]"><span
-                    class="bg-navLinksActive bg-clip-text text-transparent">Shop Now</span></button>
-            <button class="bg-[#68584c] border-2 rounded-[2rem] border-[#DABB9E] py-1 px-4 hover:bg-[#3c2c2b]"><span
-                    class="bg-navLinksActive bg-clip-text text-transparent">Catelog</span></button>
-        </div>
-
-        <div
-            class="absolute bottom-0 lg:left-12 left-2 flex sm:flex-row flex-col bg-[#4A2721] items-center justify-center py-1 px-3 border-l-2 border-t-4 border-[#8e5f4c] rounded-t-[4rem]">
-            <img src="Img/Cup1.png" alt="" class="w-[20rem] ">
-            <div>
-                <h3
-                    class="text-shadow-lg font-DancingScript bg-navLinksActive bg-clip-text text-transparent lg:text-[3.5rem] text-[2rem]">
-                    But First Coffee</h3>
-                <button
-                    class="font-Leiko flex items-center bg-navLinksActive bg-clip-text text-transparent space-x-3 border-2 border-[#DABB9E] rounded-[2rem] text-[1.5rem] py-1 px-4">Hurry
-                    Up <img src="Img/Courier-Bike-Icon.png" class="w-[3rem]"></button>
-            </div>
-        </div>
+      </div>
     </header>
 
     <div class="relative h-full flex flex-col space-y-24 overflow-hidden">
-        <!-- beans image for background -->
-        <img src="Img/Coffee beans.png" alt="" class="w-full object-cover absolute top-[28rem]">
-        <img src="Img/Coffee beans.png" alt="" class="w-full md:hidden flex object-cover absolute bottom-0">
+      <!-- beans image for background -->
+      <img
+        src="Img/Coffee beans.png"
+        alt=""
+        class="w-full object-cover absolute top-[28rem]"
+      />
+      <img
+        src="Img/Coffee beans.png"
+        alt=""
+        class="w-full md:hidden flex object-cover absolute bottom-0"
+      />
 
-        <!-- Our Story -->
-        <section class="w-full h-auto py-10 flex flex-col items-center justify-center">
-            <div
-                class="xl:w-[80%] w-[95%] h-[25rem] bg-[#54362a] rounded-3xl border-l-2 border-t-4 border-[#8e5f4c] flex md:flex-row flex-col items-center justify-center py-5 relative">
-                <div>
-                    <img src="Img/Ellipse3.png" alt="" class="absolute top-0 right-0 rounded-e-3xl">
-                    <img src="Img/Ellipse4.png" alt="" class="absolute top-0 right-0 rounded-e-3xl">
-                </div>
-                <h4
-                    class="absolute -top-10 md:right-14 right-2 font-DancingScript bg-navLinksActive bg-clip-text text-transparent text-[3.5rem] text-shadow-lg">
-                    Our Story</h4>
-                <img src="Img/Image-ourstory.png" alt="" class="w-[40%] absolute left-0 -top-10">
-                <div class=" flex justify-center flex-col font-Leiko text-white ">
-                    <p
-                        class="md:w-[60%] md:text-[1.3rem] md:text-start text-center absolute lg:right-6 right-0 text-wrap">
-                        Eliza is an online coffee store that
-                        offers the widest selection of specialty coffees and teas from around the world. From
-                        medium-dark roast single origin to flavored espresso beans, they offer a variety of ethically
-                        sourced products to tantalize any customer’s palate. For those looking for unique brewing
-                        equipment, Eliza also carries a full range of quality espresso makers, grinders,
-                        brewers.... <span class=" hidden">French presses and more. On top of all that, their baristas
-                            are
-                            highly trained professionals who know exactly how to make the perfect cup for each customer.
-                            Whether it's for home or business use, Eliza has you covered - all conveniently available at
-                            the click of a button!</span></p>
-                    <a href="#" class="absolute right-8 bottom-5 text-[1.8rem] underline">More</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Our Services -->
-        <section class="w-full h-auto py-10 flex flex-col items-center justify-center space-y-10" id="services">
-            <h4 class="font-DancingScript bg-navLinksActive bg-clip-text text-transparent text-[3.5rem] text-shadow-lg">
-                Services</h4>
-            <div class="w-full flex items-center justify-evenly flex-wrap">
-                <div
-                    class="flex flex-col items-center w-[10rem] py-3 space-y-3 mb-2 bg-[#54372A] rounded-lg text-[#F8E4BE] text-[1.2rem] font-Leiko">
-                    <img src="Img/service1.png" alt="">
-                    <p>Equipment</p>
-                </div>
-                <div
-                    class="flex flex-col items-center w-[10rem] py-3 space-y-3 mb-2 bg-[#54372A] rounded-lg text-[#F8E4BE] text-[1.2rem] font-Leiko">
-                    <img src="Img/service2.png" alt="">
-                    <p>Type Of Coffee</p>
-                </div>
-                <div
-                    class="flex flex-col items-center w-[10rem] py-3 space-y-3 mb-2 bg-[#54372A] rounded-lg text-[#F8E4BE] text-[1.2rem] font-Leiko">
-                    <img src="Img/service3.png" alt="">
-                    <p>Take A Way</p>
-                </div>
-                <div
-                    class="flex flex-col items-center w-[10rem] py-3 space-y-3 mb-2 bg-[#54372A] rounded-lg text-[#F8E4BE] text-[1.2rem] font-Leiko">
-                    <img src="Img/service4.png" alt="">
-                    <p>Beans Varient</p>
-                </div>
-                <div
-                    class="flex flex-col items-center w-[10rem] py-3 space-y-3 mb-2 bg-[#54372A] rounded-lg text-[#F8E4BE] text-[1.2rem] font-Leiko">
-                    <img src="Img/service5.png" alt="">
-                    <p>Pastry</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Offer -->
-        <section class="w-full h-auto py-10 flex flex-col items-center justify-center">
-            <div
-                class="xl:w-[80%] w-[95%] h-[25rem] bg-[#54362a] rounded-3xl border-l-2 border-t-4 border-[#8e5f4c] flex md:flex-row flex-col items-center justify-center py-5 relative">
-                <div>
-                    <img src="Img/offer-ellipse2.png" alt="" class="absolute top-0 left-0 rounded-t-3xl">
-                    <img src="Img/offer-ellipse1.png" alt="" class="absolute top-0 left-0 rounded-t-3xl">
-                </div>
-                <h4
-                    class="absolute -top-10 md:right-14 left-7 font-DancingScript bg-navLinksActive bg-clip-text text-transparent text-[3.5rem] text-shadow-lg">
-                    Offer</h4>
-                <img src="Img/offer-Image.png" alt="" class="w-[30%] absolute right-0 -top-10">
-                <div
-                    class="flex md:items-start items-center justify-center flex-col font-Leiko text-white space-y-5 md:ml-10">
-                    <h5 class="font-Leiko bg-navLinksActive bg-clip-text text-transparent text-[1.5rem] md:text-[3rem]">
-                        Up To <span class="text-[4rem]">50%</span> Off</h5>
-                    <p class="md:w-[60%] md:text-[1.3rem] md:text-start text-center text-wrap">At our cafe, we take
-                        pride in providing our customers with the best coffee around. Our carefully-selected coffees
-                        come from some of the most renowned coffee growing regions in the world, ensuring that each cup
-                        is unrivaled in flavor and freshness.</p>
-                    <button
-                        class="bg-[#68584c] border-2 rounded-[2rem] border-[#DABB9E] py-1 px-4 hover:bg-[#3c2c2b] text-[1.5rem]"><span
-                            class="bg-navLinksActive bg-clip-text text-transparent">Shop Now</span></button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Reserve A table -->
-        <section
-            class="w-full h-auto py-4 xl:px-32 px-5 flex flex-col items-center justify-center bg-[#54362aa6] relative">
-            <h4
-                class="font-DancingScript bg-navLinksActive bg-clip-text text-transparent text-[3.5rem] text-shadow-lg absolute -top-10">
-                Reserve a Table</h4>
-            <div class="w-full flex md:flex-row md:space-y-0 space-y-4 flex-col items-center justify-evenly font-Leiko">
-                <img src="Img/Reserve Img.png" alt="">
-                <form class="md:w-[30%] w-full flex flex-wrap items-center space-y-5">
-                    <input type="date" placeholder="Date"
-                        class="w-full py-1 px-2 text-lg rounded-md placeholder:text-[#9D8781] text-[#9D8781]">
-                    <div class="w-full flex justify-between md:space-y-0 space-y-5 flex-wrap">
-                        <input type="time"
-                            class="md:w-[45%] w-full py-1 px-2 text-lg rounded-md placeholder:text-[#9D8781] text-[#9D8781]">
-                        <select
-                            class="md:w-[45%] w-full py-1 px-2 text-lg rounded-md placeholder:text-[#9D8781] text-[#9D8781]">
-                            <option value="">Guest</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                            <option value="">4</option>
-                            <option value="">5</option>
-                            <option value="">6</option>
-                            <option value="">7</option>
-                            <option value="">8</option>
-                            <option value="">9</option>
-                            <option value="">10</option>
-                        </select>
-                    </div>
-                    <input type="text" placeholder="Your Name"
-                        class="w-full py-1 px-2 text-lg rounded-md placeholder:text-[#9D8781] text-[#9D8781]">
-                    <input type="number" placeholder="Your Phone"
-                        class="w-full py-1 px-2 text-lg rounded-md placeholder:text-[#9D8781] text-[#9D8781]">
-                    <div class="w-full flex md:justify-between justify-center md:space-y-0 space-y-5 flex-wrap">
-                        <input type="email" placeholder="Your Email"
-                            class="md:w-[50%] w-full py-1 px-2 text-lg rounded-md placeholder:text-[#9D8781] text-[#9D8781]">
-                        <button
-                            class="bg-[#644639] border-2 rounded-[2rem] border-[#DABB9E] py-1 px-16 hover:bg-[#3c2c2b] text-[1.5rem]"><span
-                                class="bg-navLinksActive bg-clip-text text-transparent">Reserve</span></button>
-                    </div>
-                </form>
-            </div>
-        </section>
-
-        <!-- Recomended Section -->
-        <section class="w-full h-auto py-10 flex flex-col items-center justify-center space-y-10" id="products">
-            <h4 class="font-DancingScript bg-navLinksActive bg-clip-text text-transparent text-[3.5rem] text-shadow-lg">
-                Recommended</h4>
-            <div class="w-full flex items-center justify-evenly flex-wrap space-y-6 md:space-y-0">
-                <div
-                    class="flex flex-col items-center bg-[#54372A] rounded-2xl text-[#F8E4BE] text-[1.2rem] font-Leiko">
-                    <div class="w-full">
-                        <i class="bi bi-info-circle ml-2 mt-1"></i>
-                        <img src="Img/product1.png" alt="">
-                    </div>
-                    <div class="w-full flex bg-[#ffffff69] justify-center space-x-2 p-3 rounded-b-2xl text-white">
-                        <p>Arabica</p>
-                        <p class="text-[#ffffffd3]">Dark Roast</p>
-                        <i class="bi bi-cart3 text-[#F8E4BE]"></i>
-                    </div>
-                </div>
-                <div
-                    class="flex flex-col items-center bg-[#54372A] rounded-2xl text-[#F8E4BE] text-[1.2rem] font-Leiko">
-                    <div class="w-full">
-                        <i class="bi bi-info-circle ml-2 mt-1"></i>
-                        <img src="Img/product2.png" alt="">
-                    </div>
-                    <div class="w-full flex bg-[#ffffff69] justify-center space-x-2 p-3 rounded-b-2xl text-white">
-                        <p>House Blend</p>
-                        <p class="text-[#ffffffd3]">Dark Roast</p>
-                        <i class="bi bi-cart3 text-[#F8E4BE]"></i>
-                    </div>
-                </div>
-                <div
-                    class="flex flex-col items-center bg-[#54372A] rounded-2xl text-[#F8E4BE] text-[1.2rem] font-Leiko">
-                    <div class="w-full">
-                        <i class="bi bi-info-circle ml-2 mt-1"></i>
-                        <img src="Img/product3.png" alt="">
-                    </div>
-                    <div class="w-full flex bg-[#ffffff69] justify-center space-x-2 p-3 rounded-b-2xl text-white">
-                        <p>Robusta</p>
-                        <p class="text-[#ffffffd3]">Dark Roast</p>
-                        <i class="bi bi-cart3 text-[#F8E4BE]"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="space-x-3 text-[2rem] text-[#F8E4BE]">
-                <button><i class="bi bi-arrow-left-circle"></i></button>
-                <button><i class="bi bi-arrow-right-circle"></i></button>
-            </div>
-        </section>
-
-        <!-- Popular Menu -->
-        <section class="w-full h-auto py-10 flex flex-col items-center justify-center" id="menu">
-            <h4 class="font-DancingScript bg-navLinksActive bg-clip-text text-transparent text-[3.5rem] text-shadow-lg">
-                Popular Menu</h4>
-            <div class="w-full flex lg:flex-row flex-col items-center justify-center">
-                <div class="flex flex-col space-y-16">
-                    <div>
-                        <div class="flex justify-between items-center text-[#F8E4BE] font-DancingScript">
-                            <p class="text-[1.5rem]">$40.00</p>
-                            <p class="text-[2.5rem]">Chocolate</p>
-                        </div>
-                        <img src="Img/menu-vector2.png" alt="">
-                    </div>
-                    <div>
-                        <div class="flex justify-between items-center text-[#F8E4BE] font-DancingScript">
-                            <p class="text-[1.5rem]">$25.00</p>
-                            <p class="text-[2.5rem]">Double Es</p>
-                        </div>
-                        <img src="Img/menu-vector2.png" alt="">
-                    </div>
-                    <div>
-                        <div class="flex justify-between items-center text-[#F8E4BE] font-DancingScript">
-                            <p class="text-[1.5rem]">$45.00</p>
-                            <p class="text-[2.5rem]">Caramel</p>
-                        </div>
-                        <img src="Img/menu-vector2.png" alt="">
-                    </div>
-                    <div>
-                        <div class="flex justify-between items-center text-[#F8E4BE] font-DancingScript">
-                            <p class="text-[1.5rem]">$5.00</p>
-                            <p class="text-[2.5rem]">Doppio</p>
-                        </div>
-                        <img src="Img/menu-vector2.png" alt="">
-                    </div>
-                </div>
-                <img src="Img/Popularmenu Img.png">
-                <div class="flex flex-col space-y-16">
-                    <div>
-                        <div class="flex justify-between items-center text-[#F8E4BE] font-DancingScript">
-                            <p class="text-[2.5rem]">Expersso</p>
-                            <p class="text-[1.5rem]">$30.00</p>
-                        </div>
-                        <img src="Img/menu-vector.png" alt="">
-                    </div>
-                    <div>
-                        <div class="flex justify-between items-center text-[#F8E4BE] font-DancingScript">
-                            <p class="text-[2.5rem]">Cappuccino</p>
-                            <p class="text-[1.5rem]">$30.00</p>
-                        </div>
-                        <img src="Img/menu-vector.png" alt="">
-                    </div>
-                    <div>
-                        <div class="flex justify-between items-center text-[#F8E4BE] font-DancingScript">
-                            <p class="text-[2.5rem]">Mocha</p>
-                            <p class="text-[1.5rem]">$25.00</p>
-                        </div>
-                        <img src="Img/menu-vector.png" alt="">
-                    </div>
-                    <div>
-                        <div class="flex justify-between items-center text-[#F8E4BE] font-DancingScript">
-                            <p class="text-[2.5rem]">Latte</p>
-                            <p class="text-[1.5rem]">$25.00</p>
-                        </div>
-                        <img src="Img/menu-vector.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <p class="text-[2.5rem] text-[#F8E4BE] font-Leiko space-x-4"><span>Our Menu</span><i
-                    class="bi bi-arrow-down-right-square text-[1rem]"></i>
+      <!-- Our Story -->
+      <section
+        class="w-full h-auto py-10 flex flex-col items-center justify-center"
+      >
+        <div
+          class="xl:w-[80%] w-[95%] h-[25rem] bg-[#54362a] rounded-3xl border-l-2 border-t-4 border-[#8e5f4c] flex md:flex-row flex-col items-center justify-center py-5 relative"
+        >
+          <div>
+            <img
+              src="Img/Ellipse3.png"
+              alt=""
+              class="absolute top-0 right-0 rounded-e-3xl"
+            />
+            <img
+              src="Img/Ellipse4.png"
+              alt=""
+              class="absolute top-0 right-0 rounded-e-3xl"
+            />
+          </div>
+          <h4
+            class="absolute -top-10 md:right-14 right-2 font-DancingScript bg-navLinksActive bg-clip-text text-transparent text-[3.5rem] text-shadow-lg"
+          >
+            Our Story
+          </h4>
+          <img
+            src="Img/Image-ourstory.png"
+            alt=""
+            class="w-[40%] absolute left-0 -top-10"
+          />
+          <div class="flex justify-center flex-col font-Leiko text-white">
+            <p
+              class="md:w-[60%] md:text-[1.3rem] md:text-start text-center absolute lg:right-6 right-0 text-wrap"
+            >
+              Eliza is an online coffee store that offers the widest selection
+              of specialty coffees and teas from around the world. From
+              medium-dark roast single origin to flavored espresso beans, they
+              offer a variety of ethically sourced products to tantalize any
+              customer’s palate. For those looking for unique brewing equipment,
+              Eliza also carries a full range of quality espresso makers,
+              grinders, brewers....
+              <span class="hidden"
+                >French presses and more. On top of all that, their baristas are
+                highly trained professionals who know exactly how to make the
+                perfect cup for each customer. Whether it's for home or business
+                use, Eliza has you covered - all conveniently available at the
+                click of a button!</span
+              >
             </p>
-        </section>
+            <a
+              href="#"
+              class="absolute right-8 bottom-5 text-[1.8rem] underline"
+              >More</a
+            >
+          </div>
+        </div>
+      </section>
 
-        <!-- Our Blogs -->
-        <section
-            class="w-full h-auto py-4 xl:px-32 px-5 flex flex-col items-center justify-center bg-[#53362A] relative overflow-hidden" id="blog">
-            <h4
-                class="font-DancingScript bg-navLinksActive bg-clip-text text-transparent text-[3.5rem] text-shadow-lg absolute top-0">
-                Our Blog</h4>
-            <img src="Img/BlogImg/Bg Of blog.png" class="object-cover absolute h-full w-full">
-            <div
-                class="w-full flex lg:flex-row flex-col lg:space-x-8 space-x-0 space-y-5 lg:space-y-0 items-center justify-center py-10 mt-16">
-                <div class="bg-[#997D6C] rounded-3xl font-Leiko lg:w-[30%] w-full flex flex-col space-y-3 p-4 z-50">
-                    <h5 class="text-center md:text-start md:text-[1.8rem] text-[1.5rem] text-white">How To Make A Great
-                        Coffee</h5>
-                    <p class="text-[1.3rem] text-[#F6E5DA] md:text-start text-center">Making a cup of coffee doesn't
-                        have to be complicated. Start by gathering your supplies: coffee
-                        grounds, water, and a French press, mug or other vessel. Next, measure out
-                        2 table spoons of ground coffee per 8 ounces ofwater. If you're using a French<span
-                            class="hidden"> press, pour
-                            the measured grounds into the bottom of the press followed by hot water (between 195-205
-                            degrees Fahrenheit). Let sit for three minutes before gently pushing down on the filter to
-                            trap the grounds at the bottom; this will create an intense flavor with slightly heavier
-                            body than filtered methods. If you have neither a French press nor filter, just pour your
-                            measured grounds directly into a mug or vessel and top with piping hot water. Give it a stir
-                            and let it sit for 3-4 minutes before consuming--but don't leave it too long as this method
-                            won't produce quite as bold of a flavor as either filtering or pressing would!</span></p>
-                    <img src="Img/BlogImg/blog1-frame.png" alt="" class="w-[20rem]">
-                    <div class="w-full flex items-center justify-between flex-wrap">
-                        <div class="flex space-x-3 text-black text-[1rem]">
-                            <p class="flex items-center space-x-1"><span
-                                    class="p-2 rounded-full bg-[#FFE7CF]"></span><span>Sleamed Milk</span></p>
-                            <p class="flex items-center space-x-1"><span
-                                    class="p-2 rounded-full bg-[#ffffff]"></span><span>Milk Foam</span></p>
-                            <p class="flex items-center space-x-1"><span
-                                    class="p-2 rounded-full bg-[#533A2F]"></span><span>Expersso</span></p>
-                        </div>
-                        <a href="#" class="text-[#ffff] text-[1.3rem] underline">More</a>
-                    </div>
-                </div>
-                <!-- <div class="bg-[#997D6C] rounded-3xl font-Leiko lg:w-[30%] w-full flex flex-col space-y-3 p-4 z-50">
-                    <h5 class="text-center md:text-start md:text-[1.8rem] text-[1.5rem] text-white">Why Does Caffeine
-                        Make Us Stay Awake?</h5>
-                    <p class="text-[1.3rem] text-[#F6E5DA] md:text-start text-center">Caffeine works by blocking
-                        adenosine receptors in the brain, which facilitates energy production and makes us feel more
-                        alert. Caffeine also increases adrenaline levels, further boosting your energy and heart rate,
-                        as well as other hormones<span class="hidden"> like dopamine that can make you feel more awake.
-                            The combination of these effects makes caffeine a stimulant that is all-too common in both
-                            food and drinks to give us an extra boost of energy when we need it most. It's no wonder why
-                            so many people rely on caffeinated beverages - it really can make us stay awake!</span></p>
-                    <div class="w-full flex items-center justify-between flex-wrap">
-                        <img src="Img/BlogImg/blog2-frame.png" alt="" class="w-[20rem]">
-                        <a href="#" class="text-[#ffff] text-[1.3rem] underline">More</a>
-                    </div>
-                </div>
-                <div class="bg-[#997D6C] rounded-3xl font-Leiko lg:w-[30%] w-full flex flex-col space-y-3 p-4 z-50">
-                    <h5 class="text-center md:text-start md:text-[1.8rem] text-[1.5rem] text-white">Different types of
-                        coffee Explained</h5>
-                    <p class="text-[1.3rem] text-[#F6E5DA] md:text-start text-center">Coffee is a staple in the lives of
-                        many and comes in a variety of forms. Whether you prefer hot or iced, espresso-based or filter,
-                        you’re spoilt for choice. To help beginners navigate their first foray into the world of coffee,
-                        let’s breakdown some basic <span class="hidden">categories: Espresso is an especially intense
-                            type of brewed coffee made by forcing pressurized water through finely ground beans. It has
-                            a strong flavor and can be used to make all manner of delicious drinks like flat whites,
-                            cappuccinos and lattes. Filter coffee is made with a paper filter that holds back most
-                            grounds before allowing the liquid to drip down into your cup. Its taste is less intense
-                            than that of espresso but still robust enough to serve with milk or flavored syrups if
-                            desired. Cold brew on the other hand isn't actually brewed using heat but rather steeped in
-                            cold water overnight to produce a smooth yet sweet drink - great over ice! Finally there's
-                            nitro which takes cold brew and injects it (through nitrogen) with carbon dioxide for an
-                            even creamier texture and slightly sweet flavor profile. No matter what you choose, chances
-                            are you won't be disappointed!</span></p>
-                    <div class="w-full flex items-center justify-between flex-wrap">
-                        <img src="Img/BlogImg/blog3-frame.png" alt="" class="w-[20rem]">
-                        <a href="#" class="text-[#ffff] text-[1.3rem] underline">More</a>
-                    </div>
-                </div> -->
-            </div>
-            <div class="w-full flex items-center justify-between text-[3rem] text-[#F8E4BE]">
-                <i class="bi bi-chevron-left"></i>
-                <i class="bi bi-chevron-right"></i>
-            </div>
-        </section>
+      <!-- Our Services -->
+      <section
+        class="w-full h-auto py-10 flex flex-col items-center justify-center space-y-10"
+        id="services"
+      >
+        <h4
+          class="font-DancingScript bg-navLinksActive bg-clip-text text-transparent text-[3.5rem] text-shadow-lg"
+        >
+          Services
+        </h4>
+        <div class="w-full flex items-center justify-evenly flex-wrap">
+          <div
+            class="flex flex-col items-center w-[10rem] py-3 space-y-3 mb-2 bg-[#54372A] rounded-lg text-[#F8E4BE] text-[1.2rem] font-Leiko"
+          >
+            <img src="Img/service1.png" alt="" />
+            <p>Equipment</p>
+          </div>
+          <div
+            class="flex flex-col items-center w-[10rem] py-3 space-y-3 mb-2 bg-[#54372A] rounded-lg text-[#F8E4BE] text-[1.2rem] font-Leiko"
+          >
+            <img src="Img/service2.png" alt="" />
+            <p>Type Of Coffee</p>
+          </div>
+          <div
+            class="flex flex-col items-center w-[10rem] py-3 space-y-3 mb-2 bg-[#54372A] rounded-lg text-[#F8E4BE] text-[1.2rem] font-Leiko"
+          >
+            <img src="Img/service3.png" alt="" />
+            <p>Take A Way</p>
+          </div>
+          <div
+            class="flex flex-col items-center w-[10rem] py-3 space-y-3 mb-2 bg-[#54372A] rounded-lg text-[#F8E4BE] text-[1.2rem] font-Leiko"
+          >
+            <img src="Img/service4.png" alt="" />
+            <p>Beans Varient</p>
+          </div>
+          <div
+            class="flex flex-col items-center w-[10rem] py-3 space-y-3 mb-2 bg-[#54372A] rounded-lg text-[#F8E4BE] text-[1.2rem] font-Leiko"
+          >
+            <img src="Img/service5.png" alt="" />
+            <p>Pastry</p>
+          </div>
+        </div>
+      </section>
 
-        <!-- Customer Reveiw -->
-        <section class="w-full h-auto py-4 xl:px-32 px-5 flex flex-col items-center justify-center relative">
-            <h4
-                class="font-DancingScript bg-navLinksActive bg-clip-text text-transparent sm:text-[3.5rem] text-[3rem] text-shadow-lg absolute -top-10">
-                Customer Review</h4>
-            <div class="relative xl:w-[80%] w-[95%] h-[30rem] rounded-3xl overflow-x-scroll">
-                <img src="Img/Bg customer.png" class="absolute w-full h-full object-cover top-0 rounded-3xl">
-                <div class="w-full absolute bottom-0 flex items-center justify-center space-x-5">
-                    <div class="bg-[#66371D] lg:w-[35%] w-full sm:h-[23rem] h-[26rem] flex flex-col items-center justify-center p-4 rounded-t-2xl text-[#F0E3D0] text-center space-y-4 font-Leiko">
-                        <img src="Img/customerImg.png" alt="" class="rounded-full border-4 border-[#f8e4be]">
-                        <p class="text-[1.6rem]">Tyler<br><span>Student</span></p>
-                        <div class="text-[1.3rem]">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-half"></i>
-                        </div>
-                        <p>I love spending my downtime in a cozy coffee shop, surrounded by the sweet aroma of freshly brewed drinks and pastries.</p>
-                    </div>
-                </div>
-                <div class="w-full flex items-center justify-between text-[3rem] text-[#F8E4BE] absolute top-20">
-                    <i class="bi bi-chevron-left"></i>
-                    <i class="bi bi-chevron-right"></i>
-                </div>
-            </div>
-        </section>
-
-        <!-- Subscribe Us -->
-        <section
-            class="w-full h-auto py-4 xl:px-32 px-5 flex flex-col items-center justify-center bg-[#54362aa6] relative font-Leiko space-y-16" id="contactUs">
-            <img src="Img/subsGlow1.png" alt="" class="absolute left-0 top-0">
-            <img src="Img/subsGlow2.png" alt="" class="absolute left-0 bottom-0 md:flex hidden">
-            <h5 class="text-[#F8E4BE] lg:text-[1.8rem] text-[1.3rem] text-center">Subscribe to our newsletter, discounts
-                and promotions</h5>
-            <input type="email" placeholder="Your Email Address"
-                class="lg:w-[30%] w-full py-1 px-2 text-[1.5rem] rounded-md placeholder:text-[#9D8781] text-[#9D8781]">
+      <!-- Offer -->
+      <section
+        class="w-full h-auto py-10 flex flex-col items-center justify-center"
+      >
+        <div
+          class="xl:w-[80%] w-[95%] h-[25rem] bg-[#54362a] rounded-3xl border-l-2 border-t-4 border-[#8e5f4c] flex md:flex-row flex-col items-center justify-center py-5 relative"
+        >
+          <div>
+            <img
+              src="Img/offer-ellipse2.png"
+              alt=""
+              class="absolute top-0 left-0 rounded-t-3xl"
+            />
+            <img
+              src="Img/offer-ellipse1.png"
+              alt=""
+              class="absolute top-0 left-0 rounded-t-3xl"
+            />
+          </div>
+          <h4
+            class="absolute -top-10 md:right-14 left-7 font-DancingScript bg-navLinksActive bg-clip-text text-transparent text-[3.5rem] text-shadow-lg"
+          >
+            Offer
+          </h4>
+          <img
+            src="Img/offer-Image.png"
+            alt=""
+            class="w-[30%] absolute right-0 -top-10"
+          />
+          <div
+            class="flex md:items-start items-center justify-center flex-col font-Leiko text-white space-y-5 md:ml-10"
+          >
+            <h5
+              class="font-Leiko bg-navLinksActive bg-clip-text text-transparent text-[1.5rem] md:text-[3rem]"
+            >
+              Up To <span class="text-[4rem]">50%</span> Off
+            </h5>
+            <p
+              class="md:w-[60%] md:text-[1.3rem] md:text-start text-center text-wrap"
+            >
+              At our cafe, we take pride in providing our customers with the
+              best coffee around. Our carefully-selected coffees come from some
+              of the most renowned coffee growing regions in the world, ensuring
+              that each cup is unrivaled in flavor and freshness.
+            </p>
             <button
-                class="bg-[#644639] border-2 rounded-[2rem] border-[#DABB9E] py-1 px-16 hover:bg-[#3c2c2b] text-[1.5rem]"><span
-                    class="bg-navLinksActive bg-clip-text text-transparent">Subscribe</span></button>
-        </section>
+              class="bg-[#68584c] border-2 rounded-[2rem] border-[#DABB9E] py-1 px-4 hover:bg-[#3c2c2b] text-[1.5rem]"
+            >
+              <span class="bg-navLinksActive bg-clip-text text-transparent"
+                >Shop Now</span
+              >
+            </button>
+          </div>
+        </div>
+      </section>
 
-        <!-- footer -->
-        <footer class="w-full h-auto bg-[#54362abb] font-Leiko py-16 relative">
-            <img src="Img/Bg footer.png" alt="" class="object-cover w-full h-full absolute top-0">
+      <!-- Reserve A table -->
+      <section
+        class="w-full h-auto py-4 xl:px-32 px-5 flex flex-col items-center justify-center bg-[#54362aa6] relative"
+      >
+        <h4
+          class="font-DancingScript bg-navLinksActive bg-clip-text text-transparent text-[3.5rem] text-shadow-lg absolute -top-10"
+        >
+          Reserve a Table
+        </h4>
+        <div
+          class="w-full flex md:flex-row md:space-y-0 space-y-4 flex-col items-center justify-evenly font-Leiko"
+        >
+          <img src="Img/Reserve Img.png" alt="" />
+          <form class="md:w-[30%] w-full flex flex-wrap items-center space-y-5">
+            <input
+              type="date"
+              placeholder="Date"
+              class="w-full py-1 px-2 text-lg rounded-md placeholder:text-[#9D8781] text-[#9D8781]"
+            />
             <div
-                class="w-full flex lg:flex-row float-right flex-col items-center lg:space-y-0 space-y-5 justify-evenly text-[#FFF3E0]">
-                <img src="Img/Footer Img.png">
-                <ul class="space-y-6 text-[1.2rem] lg:text-start text-center">
-                    <li><a href="#" class="text-[1.5rem]">About</a></li>
-                    <li><a href="#">Our Story</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Careers</a></li>
-                </ul>
-                <ul class="space-y-6 text-[1.2rem] lg:text-start text-center">
-                    <li><a href="#" class="text-[1.5rem]">Customer Resources</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Locations</a></li>
-                    <li><a href="#">Support</a></li>
-                </ul>
-                <ul class="space-y-6 text-[1.2rem] lg:text-start text-center">
-                    <li><a href="#" class="text-[1.5rem]">Services</a></li>
-                    <li><a href="#">Payment Options</a></li>
-                    <li><a href="#">Refunds & Exchange</a></li>
-                    <li><a href="#">Limitation Of Liability</a></li>
-                </ul>
-                <ul class="space-y-6 text-[1.4rem] lg:text-start text-center">
-                    <li><a href="#"><i class="bi bi-geo-alt-fill"></i> Location</a></li>
-                    <li><a href="#"><i class="bi bi-envelope"></i> ramla.eman.ra@gmail.com</a></li>
-                    <li><a href="#"><i class="bi bi-phone"></i> +92 312-0306090</a></li>
-                </ul>
+              class="w-full flex justify-between md:space-y-0 space-y-5 flex-wrap"
+            >
+              <input
+                type="time"
+                class="md:w-[45%] w-full py-1 px-2 text-lg rounded-md placeholder:text-[#9D8781] text-[#9D8781]"
+              />
+              <select
+                class="md:w-[45%] w-full py-1 px-2 text-lg rounded-md placeholder:text-[#9D8781] text-[#9D8781]"
+              >
+                <option value="">Guest</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+                <option value="">6</option>
+                <option value="">7</option>
+                <option value="">8</option>
+                <option value="">9</option>
+                <option value="">10</option>
+              </select>
             </div>
-        </footer>
+            <input
+              type="text"
+              placeholder="Your Name"
+              class="w-full py-1 px-2 text-lg rounded-md placeholder:text-[#9D8781] text-[#9D8781]"
+            />
+            <input
+              type="number"
+              placeholder="Your Phone"
+              class="w-full py-1 px-2 text-lg rounded-md placeholder:text-[#9D8781] text-[#9D8781]"
+            />
+            <div
+              class="w-full flex md:justify-between justify-center md:space-y-0 space-y-5 flex-wrap"
+            >
+              <input
+                type="email"
+                placeholder="Your Email"
+                class="md:w-[50%] w-full py-1 px-2 text-lg rounded-md placeholder:text-[#9D8781] text-[#9D8781]"
+              />
+              <button
+                class="bg-[#644639] border-2 rounded-[2rem] border-[#DABB9E] py-1 px-16 hover:bg-[#3c2c2b] text-[1.5rem]"
+              >
+                <span class="bg-navLinksActive bg-clip-text text-transparent"
+                  >Reserve</span
+                >
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Recomended Section -->
+      <section
+        class="w-full h-auto py-10 flex flex-col items-center justify-center space-y-10"
+        id="products"
+      >
+        <h4
+          class="font-DancingScript bg-navLinksActive bg-clip-text text-transparent text-[3.5rem] text-shadow-lg"
+        >
+          Recommended
+        </h4>
+        <div
+          class="w-full flex items-center justify-evenly flex-wrap space-y-6 md:space-y-0"
+        >
+          <div
+            class="flex flex-col items-center bg-[#54372A] rounded-2xl text-[#F8E4BE] text-[1.2rem] font-Leiko"
+          >
+            <div class="w-full">
+              <i class="bi bi-info-circle ml-2 mt-1"></i>
+              <img src="Img/product1.png" alt="" />
+            </div>
+            <div
+              class="w-full flex bg-[#ffffff69] justify-center space-x-2 p-3 rounded-b-2xl text-white"
+            >
+              <p>Arabica</p>
+              <p class="text-[#ffffffd3]">Dark Roast</p>
+              <i class="bi bi-cart3 text-[#F8E4BE]"></i>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-center bg-[#54372A] rounded-2xl text-[#F8E4BE] text-[1.2rem] font-Leiko"
+          >
+            <div class="w-full">
+              <i class="bi bi-info-circle ml-2 mt-1"></i>
+              <img src="Img/product2.png" alt="" />
+            </div>
+            <div
+              class="w-full flex bg-[#ffffff69] justify-center space-x-2 p-3 rounded-b-2xl text-white"
+            >
+              <p>House Blend</p>
+              <p class="text-[#ffffffd3]">Dark Roast</p>
+              <i class="bi bi-cart3 text-[#F8E4BE]"></i>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-center bg-[#54372A] rounded-2xl text-[#F8E4BE] text-[1.2rem] font-Leiko"
+          >
+            <div class="w-full">
+              <i class="bi bi-info-circle ml-2 mt-1"></i>
+              <img src="Img/product3.png" alt="" />
+            </div>
+            <div
+              class="w-full flex bg-[#ffffff69] justify-center space-x-2 p-3 rounded-b-2xl text-white"
+            >
+              <p>Robusta</p>
+              <p class="text-[#ffffffd3]">Dark Roast</p>
+              <i class="bi bi-cart3 text-[#F8E4BE]"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-x-3 text-[2rem] text-[#F8E4BE]">
+          <button><i class="bi bi-arrow-left-circle"></i></button>
+          <button><i class="bi bi-arrow-right-circle"></i></button>
+        </div>
+      </section>
+
+      <!-- Popular Menu -->
+      <section
+        class="w-full h-auto py-10 flex flex-col items-center justify-center"
+        id="menu"
+      >
+        <h4
+          class="font-DancingScript bg-navLinksActive bg-clip-text text-transparent text-[3.5rem] text-shadow-lg"
+        >
+          Popular Menu
+        </h4>
+        <div
+          class="w-full flex lg:flex-row flex-col items-center justify-center"
+        >
+          <div class="flex flex-col space-y-16">
+            <div>
+              <div
+                class="flex justify-between items-center text-[#F8E4BE] font-DancingScript"
+              >
+                <p class="text-[1.5rem]">$40.00</p>
+                <p class="text-[2.5rem]">Chocolate</p>
+              </div>
+              <img src="Img/menu-vector2.png" alt="" />
+            </div>
+            <div>
+              <div
+                class="flex justify-between items-center text-[#F8E4BE] font-DancingScript"
+              >
+                <p class="text-[1.5rem]">$25.00</p>
+                <p class="text-[2.5rem]">Double Es</p>
+              </div>
+              <img src="Img/menu-vector2.png" alt="" />
+            </div>
+            <div>
+              <div
+                class="flex justify-between items-center text-[#F8E4BE] font-DancingScript"
+              >
+                <p class="text-[1.5rem]">$45.00</p>
+                <p class="text-[2.5rem]">Caramel</p>
+              </div>
+              <img src="Img/menu-vector2.png" alt="" />
+            </div>
+            <div>
+              <div
+                class="flex justify-between items-center text-[#F8E4BE] font-DancingScript"
+              >
+                <p class="text-[1.5rem]">$5.00</p>
+                <p class="text-[2.5rem]">Doppio</p>
+              </div>
+              <img src="Img/menu-vector2.png" alt="" />
+            </div>
+          </div>
+          <img src="Img/Popularmenu Img.png" />
+          <div class="flex flex-col space-y-16">
+            <div>
+              <div
+                class="flex justify-between items-center text-[#F8E4BE] font-DancingScript"
+              >
+                <p class="text-[2.5rem]">Expersso</p>
+                <p class="text-[1.5rem]">$30.00</p>
+              </div>
+              <img src="Img/menu-vector.png" alt="" />
+            </div>
+            <div>
+              <div
+                class="flex justify-between items-center text-[#F8E4BE] font-DancingScript"
+              >
+                <p class="text-[2.5rem]">Cappuccino</p>
+                <p class="text-[1.5rem]">$30.00</p>
+              </div>
+              <img src="Img/menu-vector.png" alt="" />
+            </div>
+            <div>
+              <div
+                class="flex justify-between items-center text-[#F8E4BE] font-DancingScript"
+              >
+                <p class="text-[2.5rem]">Mocha</p>
+                <p class="text-[1.5rem]">$25.00</p>
+              </div>
+              <img src="Img/menu-vector.png" alt="" />
+            </div>
+            <div>
+              <div
+                class="flex justify-between items-center text-[#F8E4BE] font-DancingScript"
+              >
+                <p class="text-[2.5rem]">Latte</p>
+                <p class="text-[1.5rem]">$25.00</p>
+              </div>
+              <img src="Img/menu-vector.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <p class="text-[2.5rem] text-[#F8E4BE] font-Leiko space-x-4">
+          <span>Our Menu</span
+          ><i class="bi bi-arrow-down-right-square text-[1rem]"></i>
+        </p>
+      </section>
+
+      <!-- Our Blogs -->
+      <section
+        class="w-full h-auto py-4 xl:px-32 px-5 flex flex-col items-center justify-center bg-[#53362A] relative overflow-hidden"
+        id="blog"
+      >
+        <h4
+          class="font-DancingScript bg-navLinksActive bg-clip-text text-transparent text-[3.5rem] text-shadow-lg absolute top-0"
+        >
+          Our Blog
+        </h4>
+        <img
+          src="Img/BlogImg/Bg Of blog.png"
+          class="object-cover absolute h-full w-full"
+        />
+        <div
+          class="sliderContainer w-full flex overflow-hidden lg:space-x-8 space-x-0 items-center justify-center py-10 mt-16"
+        >
+          <div
+            class="bg-[#997D6C] rounded-3xl font-Leiko lg:w-[30%] w-full flex flex-col space-y-3 p-4 z-50 card"
+          >
+            <h5
+              class="text-center md:text-start md:text-[1.8rem] text-[1.5rem] text-white"
+            >
+              How To Make A Great Coffee
+            </h5>
+            <p class="text-[1.3rem] text-[#F6E5DA] md:text-start text-center">
+              Making a cup of coffee doesn't have to be complicated. Start by
+              gathering your supplies: coffee grounds, water, and a French
+              press, mug or other vessel. Next, measure out 2 table spoons of
+              ground coffee per 8 ounces ofwater. If you're using a French<span
+                class="hidden"
+              >
+                press, pour the measured grounds into the bottom of the press
+                followed by hot water (between 195-205 degrees Fahrenheit). Let
+                sit for three minutes before gently pushing down on the filter
+                to trap the grounds at the bottom; this will create an intense
+                flavor with slightly heavier body than filtered methods. If you
+                have neither a French press nor filter, just pour your measured
+                grounds directly into a mug or vessel and top with piping hot
+                water. Give it a stir and let it sit for 3-4 minutes before
+                consuming--but don't leave it too long as this method won't
+                produce quite as bold of a flavor as either filtering or
+                pressing would!</span
+              >
+            </p>
+            <img src="Img/BlogImg/blog1-frame.png" alt="" class="w-[20rem]" />
+            <div class="w-full flex items-center justify-between flex-wrap">
+              <div class="flex space-x-3 text-black text-[1rem]">
+                <p class="flex items-center space-x-1">
+                  <span class="p-2 rounded-full bg-[#FFE7CF]"></span
+                  ><span>Sleamed Milk</span>
+                </p>
+                <p class="flex items-center space-x-1">
+                  <span class="p-2 rounded-full bg-[#ffffff]"></span
+                  ><span>Milk Foam</span>
+                </p>
+                <p class="flex items-center space-x-1">
+                  <span class="p-2 rounded-full bg-[#533A2F]"></span
+                  ><span>Expersso</span>
+                </p>
+              </div>
+              <a href="#" class="text-[#ffff] text-[1.3rem] underline">More</a>
+            </div>
+          </div>
+          <!-- <div
+            class="bg-[#997D6C] rounded-3xl font-Leiko lg:w-[30%] w-full flex flex-col space-y-3 p-4 z-50 card"
+          >
+            <h5
+              class="text-center md:text-start md:text-[1.8rem] text-[1.5rem] text-white"
+            >
+              Why Does Caffeine Make Us Stay Awake?
+            </h5>
+            <p class="text-[1.3rem] text-[#F6E5DA] md:text-start text-center">
+              Caffeine works by blocking adenosine receptors in the brain, which
+              facilitates energy production and makes us feel more alert.
+              Caffeine also increases adrenaline levels, further boosting your
+              energy and heart rate, as well as other hormones<span
+                class="hidden"
+              >
+                like dopamine that can make you feel more awake. The combination
+                of these effects makes caffeine a stimulant that is all-too
+                common in both food and drinks to give us an extra boost of
+                energy when we need it most. It's no wonder why so many people
+                rely on caffeinated beverages - it really can make us stay
+                awake!</span
+              >
+            </p>
+            <div class="w-full flex items-center justify-between flex-wrap">
+              <img src="Img/BlogImg/blog2-frame.png" alt="" class="w-[20rem]" />
+              <a href="#" class="text-[#ffff] text-[1.3rem] underline">More</a>
+            </div>
+          </div> -->
+          <!-- <div
+            class="bg-[#997D6C] rounded-3xl font-Leiko lg:w-[30%] w-full flex flex-col space-y-3 p-4 z-50 card"
+          >
+            <h5
+              class="text-center md:text-start md:text-[1.8rem] text-[1.5rem] text-white"
+            >
+              Different types of coffee Explained
+            </h5>
+            <p class="text-[1.3rem] text-[#F6E5DA] md:text-start text-center">
+              Coffee is a staple in the lives of many and comes in a variety of
+              forms. Whether you prefer hot or iced, espresso-based or filter,
+              you’re spoilt for choice. To help beginners navigate their first
+              foray into the world of coffee, let’s breakdown some basic
+              <span class="hidden"
+                >categories: Espresso is an especially intense type of brewed
+                coffee made by forcing pressurized water through finely ground
+                beans. It has a strong flavor and can be used to make all manner
+                of delicious drinks like flat whites, cappuccinos and lattes.
+                Filter coffee is made with a paper filter that holds back most
+                grounds before allowing the liquid to drip down into your cup.
+                Its taste is less intense than that of espresso but still robust
+                enough to serve with milk or flavored syrups if desired. Cold
+                brew on the other hand isn't actually brewed using heat but
+                rather steeped in cold water overnight to produce a smooth yet
+                sweet drink - great over ice! Finally there's nitro which takes
+                cold brew and injects it (through nitrogen) with carbon dioxide
+                for an even creamier texture and slightly sweet flavor profile.
+                No matter what you choose, chances are you won't be
+                disappointed!</span
+              >
+            </p>
+            <div class="w-full flex items-center justify-between flex-wrap">
+              <img src="Img/BlogImg/blog3-frame.png" alt="" class="w-[20rem]" />
+              <a href="#" class="text-[#ffff] text-[1.3rem] underline">More</a>
+            </div>
+          </div> -->
+        </div>
+        <div
+          class="w-full flex items-center justify-between text-[3rem] text-[#F8E4BE]"
+        >
+          <i class="bi bi-chevron-left prevButton"></i>
+          <i class="bi bi-chevron-right nextButton"></i>
+        </div>
+      </section>
+
+      <!-- Customer Reveiw -->
+      <section
+        class="w-full h-auto py-4 xl:px-32 px-5 flex flex-col items-center justify-center relative"
+      >
+        <h4
+          class="font-DancingScript bg-navLinksActive bg-clip-text text-transparent sm:text-[3.5rem] text-[3rem] text-shadow-lg absolute -top-10"
+        >
+          Customer Review
+        </h4>
+        <div class="relative xl:w-[80%] w-[95%] h-[30rem] rounded-3xl">
+          <img
+            src="Img/Bg customer.png"
+            class="absolute w-full h-full object-cover top-0 rounded-3xl"
+          />
+          <div
+            class="w-full absolute bottom-0 flex items-center justify-center space-x-5"
+          >
+            <div
+              class="bg-[#66371D] lg:w-[35%] w-full sm:h-[23rem] h-[26rem] flex flex-col items-center justify-center p-4 rounded-t-2xl text-[#F0E3D0] text-center space-y-4 font-Leiko"
+            >
+              <img
+                src="Img/customerImg.png"
+                alt=""
+                class="rounded-full border-4 border-[#f8e4be]"
+              />
+              <p class="text-[1.6rem]">Tyler<br /><span>Student</span></p>
+              <div class="text-[1.3rem]">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <p>
+                I love spending my downtime in a cozy coffee shop, surrounded by
+                the sweet aroma of freshly brewed drinks and pastries.
+              </p>
+            </div>
+          </div>
+          <div
+            class="w-full flex items-center justify-between text-[3rem] text-[#F8E4BE] absolute top-20"
+          >
+            <i class="bi bi-chevron-left"></i>
+            <i class="bi bi-chevron-right"></i>
+          </div>
+        </div>
+      </section>
+
+      <!-- Subscribe Us -->
+      <section
+        class="w-full h-auto py-4 xl:px-32 px-5 flex flex-col items-center justify-center bg-[#54362aa6] relative font-Leiko space-y-16"
+        id="contactUs"
+      >
+        <img src="Img/subsGlow1.png" alt="" class="absolute left-0 top-0" />
+        <img
+          src="Img/subsGlow2.png"
+          alt=""
+          class="absolute left-0 bottom-0 md:flex hidden"
+        />
+        <h5 class="text-[#F8E4BE] lg:text-[1.8rem] text-[1.3rem] text-center">
+          Subscribe to our newsletter, discounts and promotions
+        </h5>
+        <input
+          type="email"
+          placeholder="Your Email Address"
+          class="lg:w-[30%] w-full py-1 px-2 text-[1.5rem] rounded-md placeholder:text-[#9D8781] text-[#9D8781]"
+        />
+        <button
+          class="bg-[#644639] border-2 rounded-[2rem] border-[#DABB9E] py-1 px-16 hover:bg-[#3c2c2b] text-[1.5rem]"
+        >
+          <span class="bg-navLinksActive bg-clip-text text-transparent"
+            >Subscribe</span
+          >
+        </button>
+      </section>
+
+      <!-- footer -->
+      <footer class="w-full h-auto bg-[#54362abb] font-Leiko py-16 relative">
+        <img
+          src="Img/Bg footer.png"
+          alt=""
+          class="object-cover w-full h-full absolute top-0"
+        />
+        <div
+          class="w-full flex lg:flex-row float-right flex-col items-center lg:space-y-0 space-y-5 justify-evenly text-[#FFF3E0]"
+        >
+          <img src="Img/Footer Img.png" />
+          <ul class="space-y-6 text-[1.2rem] lg:text-start text-center">
+            <li><a href="#" class="text-[1.5rem]">About</a></li>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+          <ul class="space-y-6 text-[1.2rem] lg:text-start text-center">
+            <li><a href="#" class="text-[1.5rem]">Customer Resources</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+          <ul class="space-y-6 text-[1.2rem] lg:text-start text-center">
+            <li><a href="#" class="text-[1.5rem]">Services</a></li>
+            <li><a href="#">Payment Options</a></li>
+            <li><a href="#">Refunds & Exchange</a></li>
+            <li><a href="#">Limitation Of Liability</a></li>
+          </ul>
+          <ul class="space-y-6 text-[1.4rem] lg:text-start text-center">
+            <li>
+              <a href="#"><i class="bi bi-geo-alt-fill"></i> Location</a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="bi bi-envelope"></i> ramla.eman.ra@gmail.com</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="bi bi-phone"></i> +92 312-0306090</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
     </div>
 
     <!-- Script Link -->
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
