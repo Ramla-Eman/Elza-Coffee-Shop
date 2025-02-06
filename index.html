@@ -21,7 +21,7 @@
 
 <body class="w-full h-auto bg-[#221518]">
     <!-- Header -->
-    <header class="w-full md:h-[170vh] h-[130vh] relative">
+    <header class="w-full md:h-[170vh] h-[130vh] relative" id="home">
         <img src="Img/heroImg.png" alt="Hero Image" class="w-full h-full object-cover hidden sm:flex">
         <img src="Img/hero-mobile.png" alt="Hero Image" class="w-full h-full object-cover sm:hidden flex">
         <div>
@@ -37,12 +37,12 @@
                     <i class="bi bi-cart3"></i>
                 </div>
                 <ul class="lg:flex hidden items-center justify-center space-x-12 text-[1.6rem] text-[#FFF8E8]">
-                    <li><a href="#" class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl">Home</a></li>
-                    <li><a href="#" class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl">Menu</a></li>
-                    <li><a href="#" class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl">Services</a></li>
-                    <li><a href="#" class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl">Product</a></li>
-                    <li><a href="#" class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl">Blog</a></li>
-                    <li><a href="#" class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl">Contact</a></li>
+                    <li><a href="#home" class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl">Home</a></li>
+                    <li><a href="#menu" class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl">Menu</a></li>
+                    <li><a href="#services" class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl">Services</a></li>
+                    <li><a href="#product" class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl">Product</a></li>
+                    <li><a href="#blog" class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl">Blog</a></li>
+                    <li><a href="#contactUs" class="active:bg-navLinksActive py-4 px-2 rounded-b-2xl">Contact</a></li>
                 </ul>
                 <!-- Icon For toggle -->
                 <div class="lg:hidden flex items-center text-[2rem] text-[#F8E4BE]">
@@ -140,7 +140,7 @@
         </section>
 
         <!-- Our Services -->
-        <section class="w-full h-auto py-10 flex flex-col items-center justify-center space-y-10">
+        <section class="w-full h-auto py-10 flex flex-col items-center justify-center space-y-10" id="services">
             <h4 class="font-DancingScript bg-navLinksActive bg-clip-text text-transparent text-[3.5rem] text-shadow-lg">
                 Services</h4>
             <div class="w-full flex items-center justify-evenly flex-wrap">
@@ -243,7 +243,7 @@
         </section>
 
         <!-- Recomended Section -->
-        <section class="w-full h-auto py-10 flex flex-col items-center justify-center space-y-10">
+        <section class="w-full h-auto py-10 flex flex-col items-center justify-center space-y-10" id="products">
             <h4 class="font-DancingScript bg-navLinksActive bg-clip-text text-transparent text-[3.5rem] text-shadow-lg">
                 Recommended</h4>
             <div class="w-full flex items-center justify-evenly flex-wrap space-y-6 md:space-y-0">
@@ -292,7 +292,7 @@
         </section>
 
         <!-- Popular Menu -->
-        <section class="w-full h-auto py-10 flex flex-col items-center justify-center">
+        <section class="w-full h-auto py-10 flex flex-col items-center justify-center" id="menu">
             <h4 class="font-DancingScript bg-navLinksActive bg-clip-text text-transparent text-[3.5rem] text-shadow-lg">
                 Popular Menu</h4>
             <div class="w-full flex lg:flex-row flex-col items-center justify-center">
@@ -365,7 +365,7 @@
 
         <!-- Our Blogs -->
         <section
-            class="w-full h-auto py-4 xl:px-32 px-5 flex flex-col items-center justify-center bg-[#53362A] relative overflow-hidden">
+            class="w-full h-auto py-4 xl:px-32 px-5 flex flex-col items-center justify-center bg-[#53362A] relative overflow-hidden" id="blog">
             <h4
                 class="font-DancingScript bg-navLinksActive bg-clip-text text-transparent text-[3.5rem] text-shadow-lg absolute top-0">
                 Our Blog</h4>
@@ -474,7 +474,7 @@
 
         <!-- Subscribe Us -->
         <section
-            class="w-full h-auto py-4 xl:px-32 px-5 flex flex-col items-center justify-center bg-[#54362aa6] relative font-Leiko space-y-16">
+            class="w-full h-auto py-4 xl:px-32 px-5 flex flex-col items-center justify-center bg-[#54362aa6] relative font-Leiko space-y-16" id="contactUs">
             <img src="Img/subsGlow1.png" alt="" class="absolute left-0 top-0">
             <img src="Img/subsGlow2.png" alt="" class="absolute left-0 bottom-0 md:flex hidden">
             <h5 class="text-[#F8E4BE] lg:text-[1.8rem] text-[1.3rem] text-center">Subscribe to our newsletter, discounts
